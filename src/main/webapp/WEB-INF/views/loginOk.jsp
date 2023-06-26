@@ -11,11 +11,12 @@
 </head>
 <body>
 	<%
-		String fail = (String) request.getAttribute("fail");
-		if(fail.equals("idDouble")) {	
+		String fail = (String) request.getAttribute("loginCheck");
+		if(fail.equals("0")) {	
 	%>
 		<script type="text/javascript">
-			alert('중복된 아이디입니다. 다른 아이디를 입력해주세요!');			
+			alert('아이디 또는 비밀번호가 다릅니다. 다시 확인하시기 바랍니다!');
+			history.go(-1);
 		</script>
 	<%
 		}
@@ -39,8 +40,7 @@
 				<table width="50%" border="0" cellpadding="10" cellspacing="0">
 					<tr>
 						<td colspan="2" align="center">
-							<span class="content_title">회원 가입 실패! 다시 확인해주세요.</span><br>
-							<input class="btn01" type="button" value="회원가입 돌아가기" onclick="javascript:history.go(-1);">
+							<span class="content_title">${mid }님 로그인 하셨습니다. 반갑습니다!</span><br>							
 						</td>
 					</tr>					
 				</table>

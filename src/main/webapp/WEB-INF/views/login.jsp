@@ -10,16 +10,6 @@
 <title>** Profile Home **</title>
 </head>
 <body>
-	<%
-		String fail = (String) request.getAttribute("fail");
-		if(fail.equals("idDouble")) {	
-	%>
-		<script type="text/javascript">
-			alert('중복된 아이디입니다. 다른 아이디를 입력해주세요!');			
-		</script>
-	<%
-		}
-	%>	
 	<%@ include file="include/header.jsp" %>
 	<center>
 	<table width="60%" border="0" cellpadding="20" cellspacing="0">
@@ -38,11 +28,24 @@
 				<center>
 				<table width="50%" border="0" cellpadding="10" cellspacing="0">
 					<tr>
-						<td colspan="2" align="center">
-							<span class="content_title">회원 가입 실패! 다시 확인해주세요.</span><br>
-							<input class="btn01" type="button" value="회원가입 돌아가기" onclick="javascript:history.go(-1);">
-						</td>
+						<td colspan="2" align="center"><span class="content_title">회원 로그인</span></td>
+					</tr>
+					<form action="loginOk" method="post" name="join_frm">
+					<tr>
+						<td class="content_text">아 이 디 : </td>
+						<td><input class="inputbox" type="text" name="mid"></td>
+					</tr>
+					<tr>
+						<td class="content_text">비밀번호 : </td>
+						<td><input class="inputbox" type="password" name="mpw"></td>
 					</tr>					
+					<tr>
+						<td colspan="2" align="center">
+						<input class="btn01" type="submit" value="로그인">&nbsp;&nbsp;
+						<input class="btn01" type="button" value="회원가입" onclick="javascript:window.location.href='join'">
+						</td>
+					</tr>
+					</form>
 				</table>
 				</center>
 			</td>

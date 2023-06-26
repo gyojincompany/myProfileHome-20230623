@@ -4,7 +4,18 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
 <mapper namespace="com.gyojincompany.home.dao.ProfileDao">
+	
 	<insert id="memberJoinDao">
 		INSERT INTO pmember(mid, mpw, mname, memail) VALUES(#{param1}, #{param2}, #{param3}, #{param4})
 	</insert>
+	
+	<select id="joinIdCheckDao" resultType="int">
+		SELECT count(*) FROM pmember WHERE mid=#{param1}
+	</select>
+	
+	<select id="loginOkDao" resultType="int">
+		SELECT count(*) FROM pmember WHERE mid=#{param1} AND mpw=#{param2}
+	</select>
+	
+	
 </mapper>	

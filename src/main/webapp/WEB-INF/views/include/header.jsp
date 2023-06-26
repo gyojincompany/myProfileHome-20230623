@@ -13,7 +13,7 @@
 			<td width="65%">&nbsp;</td>
 			<td width="3%" align="center"><a href="index"><span class="menutext">HOME</span></a></td>
 			<td width="1%">&nbsp;</td>
-			<td width="3%" align="center"><a href="#"><span class="menutext">LOGIN</span></a></td>
+			<td width="3%" align="center"><a href="login"><span class="menutext">LOGIN</span></a></td>
 			<td width="1%">&nbsp;</td>
 			<td width="3%" align="center"><a href="join"><span class="menutext">JOIN</span></a></td>
 			<td width="1%">&nbsp;</td>
