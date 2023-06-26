@@ -9,43 +9,46 @@
 <title>** Profile Home **</title>
 </head>
 <body>
+	<center>
 	<table width="75%" border="0" cellpadding="20" cellspacing="0">
-		<tr>
+		<tr align="center">
 			<td>
 				<span class="title01">DEVELOPER GYOJIN's PROFILE</span>
 			</td>
 		</tr>
-		<tr>
+		<tr align="center">
 			<td>
-				<span>I'm Gyojin Lee, a developer who wants a development job. Please call me back.</span>
+				<span class="title02">I'm Gyojin Lee, a developer who wants a development job. Please call me back.</span>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<table width="80%" border="0" cellpadding="20" cellspacing="0">
+				<center>
+				<table width="80%" border="0" cellpadding="10" cellspacing="0">
 					<tr>
-						<td><span>J</span>AVA</td>
-						<td rowspan="6"></td>
+						<td style="background-color: #FFC93C"><span class="skilltext01">J</span><span class="skilltext02">AVA</span></td>
+						<td rowspan="6" style="background-color: #86E5FF"><img src="/resources/img/kongyu.jpg"></td>
 					</tr>
 					<tr>
-						<td><span>J</span>SP</td>						
+						<td style="background-color: #FFC93C"><span class="skilltext01">J</span><span class="skilltext02">SP</span></td>						
 					</tr>
 					<tr>
-						<td><span>S</span>PRINGBOOT</td>						
+						<td style="background-color: #FFC93C"><span class="skilltext01">S</span><span class="skilltext02">PRINGBOOT</span></td>						
 					</tr>
 					<tr>
-						<td><span>J</span>AVASCRIPT</td>						
+						<td style="background-color: #FFC93C"><span class="skilltext01">J</span><span class="skilltext02">AVASCRIPT</span></td>						
 					</tr>
 					<tr>
-						<td><span>H</span>TLM5&CSS</td>						
+						<td style="background-color: #FFC93C"><span class="skilltext01">H</span><span class="skilltext02">TLM5&CSS</span></td>						
 					</tr>
 					<tr>
-						<td><span>D</span>ATABASE</td>						
+						<td style="background-color: #FFC93C"><span class="skilltext01">D</span><span class="skilltext02">ATABASE</span></td>						
 					</tr>
 				</table>
+				</center>
 			</td>
-		</tr>
-	
+		</tr>	
 	</table>
+	</center>
 </body>
 </html>

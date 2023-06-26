@@ -5,3 +5,21 @@ span.title01{
 	color: rgb(0, 61, 94);
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+span.title02{
+	font-size: 20px;
+	color: #5BC0F8;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+span.skilltext01{
+	font-size: 60px;
+	color:rgb(0, 61, 94);
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, 'Times New Roman', Times, serif;
+}
+
+span.skilltext02{
+	font-size: 40px;
+	color: #5BC0F8;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, 'Times New Roman', Times, serif;
+}
