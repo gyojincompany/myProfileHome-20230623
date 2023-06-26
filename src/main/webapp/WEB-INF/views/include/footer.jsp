@@ -9,7 +9,7 @@
 </head>
 <body>
 	<table border="0" cellspacing="0" cellpadding="0" width="100%">
-		<tr height="50px">
+		<tr height="35px">
 			<td>&nbsp;</td>
 		</tr>
 		<tr class="footerline">
