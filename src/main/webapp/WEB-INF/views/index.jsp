@@ -28,7 +28,7 @@
 				<table width="80%" border="0" cellpadding="10" cellspacing="0">
 					<tr>
 						<td style="background-color: #FFC93C"><span class="skilltext01">J</span><span class="skilltext02">AVA</span></td>
-						<td align="center" rowspan="6" style="background-color: #86E5FF"><img src="/resources/img/kongyu.jpg"></td>
+						<td align="center" rowspan="6" style="background-color: #006194"><img src="/resources/img/kongyu.jpg"></td>
 					</tr>
 					<tr>
 						<td style="background-color: #FFC93C"><span class="skilltext01">J</span><span class="skilltext02">SP</span></td>						
