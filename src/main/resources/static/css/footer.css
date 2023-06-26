@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+span.footertext {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif, Times, serif;
+	color: azure;
+}
+
+tr.footerline {
+	background-color: #006194;
+	text-align: center;
+	padding: 5px 0 5px 0;
+	height: 25px;
+}

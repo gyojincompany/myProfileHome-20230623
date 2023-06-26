@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+span.menutext {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif, Times, serif;
+	color: azure;
+}
+
+a:link {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: azure;
+	
+}
