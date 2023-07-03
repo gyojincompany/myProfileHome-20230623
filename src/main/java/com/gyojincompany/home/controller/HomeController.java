@@ -117,14 +117,15 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/modifyOk")
-	public String modifyOk(HttpServletRequest request, Model model) {
+	public String modifyOk(HttpServletRequest request, Model model) {		
 		
-		request.getParameter("mid")
-		request.getParameter("mpw")
-		request.getParameter("mname")
-		request.getParameter("memail")
+		ProfileDao dao = sqlSession.getMapper(ProfileDao.class);
 		
+		dao.memberModify(request.getParameter("mid"), request.getParameter("mpw"), request.getParameter("mname"), request.getParameter("memail"));
 		
+		MemberDto memberDto = dao.getMemberInfo(request.getParameter("mid"));
+		
+		model.addAttribute("memberDto", memberDto);
 		
 		return "modifyOk";
 	}

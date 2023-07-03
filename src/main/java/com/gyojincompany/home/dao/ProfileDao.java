@@ -12,4 +12,6 @@ public interface ProfileDao {
 	//1이 반환되면 아이와 비번이 일치하는 계정이 존재
 	public MemberDto getMemberInfo(String mid);
 	//아이디로 검색하여 해당 레코드를 반환
+	public int memberModify(String mid, String mpw, String mname, String memail);
+	//회원 정보 수정
 }

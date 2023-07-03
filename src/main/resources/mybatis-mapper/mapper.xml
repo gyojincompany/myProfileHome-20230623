@@ -21,5 +21,9 @@
 		SELECT * FROM pmember WHERE mid=#{param1}
 	</select>
 	
+	<update id="memberModify">
+		UPDATE pmember SET mpw=#{param2}, mname=#{param3}, memail=#{param4} WHERE mid=#{param1}
+	</update>
+	
 	
 </mapper>	
