@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.title {
+	font-size: 20px;
+	font-family: malgun;
+	color: #FFFFFF;
+	background-color: rgb(9, 147, 249);
+	text-align: center;
+	border: 1px solid rgb(188, 233, 254);
+}
+
+.content {
+	font-size: 18px;
+	font-family: malgun;
+	color: rgb(89, 89, 89);
+	background-color: lightblue;
+	text-align: center;
+	border: 1px solid  rgb(218, 237, 243);
+}

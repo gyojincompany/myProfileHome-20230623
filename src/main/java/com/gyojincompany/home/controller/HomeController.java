@@ -1,5 +1,7 @@
 package com.gyojincompany.home.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -10,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.gyojincompany.home.dao.ProfileDao;
+import com.gyojincompany.home.dto.BoardDto;
 import com.gyojincompany.home.dto.MemberDto;
 
 @Controller
@@ -131,8 +134,62 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/question")
-	public String question() {
+	public String question(HttpSession session, Model model) {
+		
+		String sessionId = (String) session.getAttribute("sessionId");		
+		
+		ProfileDao dao = sqlSession.getMapper(ProfileDao.class);
+		
+		MemberDto memberDto = null;
+		
+		if(sessionId != null) {//로그인 상태
+			model.addAttribute("boardId", sessionId);
+			memberDto = dao.getMemberInfo(sessionId);
+			model.addAttribute("boardName", memberDto.getMname());
+			model.addAttribute("boardEmail", memberDto.getMemail());
+			
+		} else {//비로그인 상태
+			model.addAttribute("boardId", "Guest");
+			model.addAttribute("boardName", "비회원");
+			model.addAttribute("boardEmail", "");
+		}
+		
 		return "questionForm";
+	}
+	
+	@RequestMapping(value = "/questionOk")
+	public String questionOk(HttpServletRequest request) {
+		
+		ProfileDao dao = sqlSession.getMapper(ProfileDao.class);
+		
+		dao.writeDao(request.getParameter("qid"), request.getParameter("qcontent"));
+		
+		return "redirect:list";
+	}
+	
+	@RequestMapping(value = "/list")
+	public String list(Model model) {
+		
+		ProfileDao dao = sqlSession.getMapper(ProfileDao.class);
+		
+		List<BoardDto> boardDtos = dao.listDao();
+		
+		model.addAttribute("boardDtos", boardDtos);
+		
+		return "list";
+	}
+	
+	@RequestMapping(value = "/questionView")
+	public String questionView(HttpServletRequest request, Model model) {
+		
+		ProfileDao dao = sqlSession.getMapper(ProfileDao.class);
+		
+		BoardDto boardDto = dao.questionViewDao(request.getParameter("qnum"));
+		
+		model.addAttribute("boardDto", boardDto);
+		
+		return "questionView";
+		
 	}
 	
 	

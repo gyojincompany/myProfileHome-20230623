@@ -5,6 +5,8 @@
 	
 <mapper namespace="com.gyojincompany.home.dao.ProfileDao">
 	
+	<!-- 회원관리 -->
+	
 	<insert id="memberJoinDao">
 		INSERT INTO pmember(mid, mpw, mname, memail) VALUES(#{param1}, #{param2}, #{param3}, #{param4})
 	</insert>
@@ -25,5 +27,18 @@
 		UPDATE pmember SET mpw=#{param2}, mname=#{param3}, memail=#{param4} WHERE mid=#{param1}
 	</update>
 	
+	<!-- 게시판 관리 -->
+	
+	<insert id="writeDao">
+		INSERT INTO pboard(qnum, qid, qcontent) VALUES(pboard_seq.nextval, #{param1}, #{param2}) 
+	</insert>
+	
+	<select id="listDao" resultType="com.gyojincompany.home.dto.BoardDto">
+		SELECT * FROM pboard ORDER BY qnum DESC
+	</select>
+	
+	<select id="questionViewDao"  resultType="com.gyojincompany.home.dto.BoardDto">		
+		SELECT * FROM pboard WHERE qnum=#{param1}
+	</select>
 	
 </mapper>	

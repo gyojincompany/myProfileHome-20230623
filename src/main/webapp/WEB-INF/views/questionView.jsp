@@ -30,30 +30,30 @@
 					<tr>
 						<td colspan="2" align="center"><span class="content_title">질문 게시판</span></td>
 					</tr>
-					<form action="questionOk" method="post" name="join_frm">
+					<tr>
+						<td class="content_text">글 번 호 : </td>
+						<td><input class="inputbox" type="text" name="qnum" value="${boardDto.qnum}" readonly="readonly"></td>
+					</tr>
+					
 					<tr>
 						<td class="content_text">아 이 디 : </td>
-						<td><input class="inputbox" type="text" name="qid" value="${boardId}" readonly="readonly"></td>
-					</tr>
+						<td><input class="inputbox" type="text" name="qid" value="${boardDto.qid}" readonly="readonly"></td>
+					</tr>					
 					<tr>
-						<td class="content_text">글 쓴 이 : </td>
-						<td><input class="inputbox" type="text" name="mname" value="${boardName}"></td>
-					</tr>
-					<tr>
-						<td class="content_text">질문내용 : </td>
-						<td><textarea cols="35" rows="8" name="qcontent"></textarea></td>
+						<td class="content_text">질문 내용 : </td>
+						<td><textarea cols="35" rows="8" name="qcontent" readonly="readonly">${boardDto.qcontent }</textarea></td>
 					</tr>										
 					<tr>
-						<td class="content_text">이 메 일 : </td>
-						<td><input class="inputbox" type="text" name="memail" value="${boardEmail}"></td>
+						<td class="content_text">등 록 일 : </td>
+						<td><input class="inputbox" type="text" name="qdate" value="${boardDto.qdate}" readonly="readonly"></td>
 					</tr>
 					<tr>
 						<td colspan="2" align="center">
-						<input class="btn01" type="submit" value="질문하기">&nbsp;&nbsp;
+						<input class="btn01" type="button" value="삭제하기" onclick="javascript:window.location.href='delete?qnum=${boardDto.qnum}'">&nbsp;&nbsp;
 						<input class="btn01" type="button" value="질문목록" onclick="javascript:window.location.href='list'">
 						</td>
 					</tr>
-					</form>
+					
 				</table>
 				</center>
 			</td>
