@@ -20,7 +20,7 @@ public interface ProfileDao {
 	
 	//**게시판관리**
 	public int writeDao(String qid, String qcontent);//질문게시판 글쓰기
-	public List<BoardDto> listDao();//모든 글 목록 불러오기
+	public List<BoardDto> listDao(int amount, int pageNum);//모든 글 목록 불러오기
 	public BoardDto questionViewDao(String qnum);//해당 번호의 글 하나 불러오기
 	
 	

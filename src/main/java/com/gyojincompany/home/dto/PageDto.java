@@ -15,6 +15,30 @@ public class PageDto {
 		// TODO Auto-generated constructor stub
 	}
 
+	public PageDto(int total, Criteria criteria) {
+		super();
+		this.total = total;
+		this.criteria = criteria;
+		
+		this.endPage = (int)(Math.ceil((criteria.getPageNum()/5.0))*5);//ceil->올림
+		this.startPage = this.endPage - 4;
+		
+		int realEndPage = (int)Math.ceil(total*1.0/criteria.getAmount());
+		//실제 끝 페이지 번호(중간에 페이지가 끝난 경우)
+		
+		if(realEndPage < endPage) {
+			this.endPage = realEndPage;
+		}
+		// 처음 계산한 endPage 값보다 realEndPage 값이 작으면 endPage값이 진짜가 아니므로
+		// endPage값을 realEndPage값으로 대체
+		
+		this.prev = this.startPage > 1;
+		//시작페이지 번호가 1과 같지 않고 크면 왼쪽에 화살표 생성
+		this.next = this.endPage < realEndPage;
+		//마지막 페이지 번호가 realEndPage와 같지 않고 작은 경우에만 next 오른쪽 화살표 생성
+		
+	}
+
 	public PageDto(int startPage, int endPage, boolean prev, boolean next, int total, Criteria criteria) {
 		super();
 		this.startPage = startPage;
