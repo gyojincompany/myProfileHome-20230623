@@ -130,5 +130,11 @@ public class HomeController {
 		return "modifyOk";
 	}
 	
+	@RequestMapping(value = "/question")
+	public String question() {
+		return "questionForm";
+	}
+	
+	
 
 }

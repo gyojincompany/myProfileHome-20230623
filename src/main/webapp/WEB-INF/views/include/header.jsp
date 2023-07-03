@@ -40,7 +40,7 @@
 			<td width="1%">&nbsp;</td>
 			<td width="3%" align="center"><a href="#"><span class="menutext">PROFILE</span></a></td>
 			<td width="1%">&nbsp;</td>
-			<td width="3%" align="center"><a href="#"><span class="menutext">QUESTION</span></a></td>
+			<td width="3%" align="center"><a href="question"><span class="menutext">QUESTION</span></a></td>
 			<td width="1%">&nbsp;</td>
 			<td width="3%" align="center"><a href="#"><span class="menutext">CONTACT</span></a></td>
 			<td width="1%">&nbsp;</td>

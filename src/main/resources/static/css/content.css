@@ -20,7 +20,7 @@ input.inputbox {
 input.btn01 {
 	border: 2px solid  #ffffff;
 	background-color: #FFC93C;
-	width: 180px;
+	width: 160px;
 	height: 40px;
 	font-family: malgun;
 	font-weight: bold;
@@ -32,7 +32,7 @@ input.btn01 {
 input.btn01:hover {
 	border: 2px solid  #ffffff;
 	background-color: rgb(136, 99, 0);
-	width: 180px;
+	width: 160px;
 	height: 40px;
 	font-family: malgun;
 	font-weight: bold;

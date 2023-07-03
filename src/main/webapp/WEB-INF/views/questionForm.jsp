@@ -28,37 +28,29 @@
 				<center>
 				<table width="50%" border="0" cellpadding="10" cellspacing="0">
 					<tr>
-						<td colspan="2" align="center"><span class="content_title">회원 정보 수정</span></td>
+						<td colspan="2" align="center"><span class="content_title">질문 게시판</span></td>
 					</tr>
-					<form action="modifyOk" method="post" name="join_frm">
+					<form action="questionOk" method="post" name="join_frm">
 					<tr>
 						<td class="content_text">아 이 디 : </td>
-						<td><input class="inputbox" type="text" name="mid" value="${memberDto.mid }" readonly="readonly"></td>
+						<td><input class="inputbox" type="text" name="qid"></td>
 					</tr>
 					<tr>
-						<td class="content_text">비밀번호 : </td>
-						<td><input class="inputbox" type="password" name="mpw" value="${memberDto.mpw }"></td>
+						<td class="content_text">글 쓴 이 : </td>
+						<td><input class="inputbox" type="text" name="mname"></td>
 					</tr>
 					<tr>
-						<td class="content_text">비밀번호확인 : </td>
-						<td><input class="inputbox" type="password" name="mpw_check"></td>
-					</tr>
-					<tr>
-						<td class="content_text">이 름 : </td>
-						<td><input class="inputbox" type="text" name="mname" value="${memberDto.mname }"></td>
-					</tr>
+						<td class="content_text">질문내용 : </td>
+						<td><textarea cols="35" rows="8" name="qcontent"></textarea></td>
+					</tr>										
 					<tr>
 						<td class="content_text">이 메 일 : </td>
-						<td><input class="inputbox" type="text" name="memail" value="${memberDto.memail }"></td>
-					</tr>
-					<tr>
-						<td class="content_text">가 입 일 : </td>
-						<td><input class="inputbox" type="text" name="mdate" value="${memberDto.mdate }" readonly="readonly"></td>
+						<td><input class="inputbox" type="text" name="memail"></td>
 					</tr>
 					<tr>
 						<td colspan="2" align="center">
-						<input class="btn01" type="button" value="수정완료" onclick="joinCheck()">&nbsp;&nbsp;
-						<input class="btn01" type="button" value="수정취소" onclick="javascript:window.location.href='index'">
+						<input class="btn01" type="submit" value="질문하기">&nbsp;&nbsp;
+						<input class="btn01" type="button" value="질문목록" onclick="javascript:window.location.href='list'">
 						</td>
 					</tr>
 					</form>
