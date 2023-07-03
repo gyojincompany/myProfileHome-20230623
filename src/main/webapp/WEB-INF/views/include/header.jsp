@@ -13,9 +13,30 @@
 			<td width="65%">&nbsp;</td>
 			<td width="3%" align="center"><a href="index"><span class="menutext">HOME</span></a></td>
 			<td width="1%">&nbsp;</td>
+			<%
+				String validLogin = (String) session.getAttribute("validMember");
+				if(validLogin == null) {//참이면 비로그인			
+			%>
 			<td width="3%" align="center"><a href="login"><span class="menutext">LOGIN</span></a></td>
+			<%
+				} else {
+			%>
+			<td width="3%" align="center"><a href="logout"><span class="menutext">LOGOUT</span></a></td>
+			<%
+				}
+			%>
 			<td width="1%">&nbsp;</td>
+			<%
+				if(validLogin == null) {//참이면 비로그인			
+			%>
 			<td width="3%" align="center"><a href="join"><span class="menutext">JOIN</span></a></td>
+			<%
+				} else {
+			%>
+			<td width="3%" align="center"><a href="modify"><span class="menutext">MODIFY</span></a></td>
+			<%
+				}
+			%>
 			<td width="1%">&nbsp;</td>
 			<td width="3%" align="center"><a href="#"><span class="menutext">PROFILE</span></a></td>
 			<td width="1%">&nbsp;</td>
