@@ -15,6 +15,7 @@ import com.gyojincompany.home.dao.ProfileDao;
 import com.gyojincompany.home.dto.BoardDto;
 import com.gyojincompany.home.dto.Criteria;
 import com.gyojincompany.home.dto.MemberDto;
+import com.gyojincompany.home.dto.PageDto;
 
 @Controller
 public class HomeController {
@@ -183,9 +184,15 @@ public class HomeController {
 		
 		ProfileDao dao = sqlSession.getMapper(ProfileDao.class);
 		
+		int total = dao.boardTotalCountDao();//모든 글의 개수
+		
+		PageDto pageDto = new PageDto(total, criteria);
+		
 		List<BoardDto> boardDtos = dao.listDao(criteria.getAmount(), pageNum);
 		
 		model.addAttribute("boardDtos", boardDtos);
+		model.addAttribute("pageMaker", pageDto);
+		model.addAttribute("currPage", pageNum);//현재 보고 있는 페이지번호
 		
 		return "list";
 	}
@@ -201,6 +208,16 @@ public class HomeController {
 		
 		return "questionView";
 		
+	}
+	
+	@RequestMapping(value = "/delete")
+	public String delete(HttpServletRequest request) {
+		
+		ProfileDao dao = sqlSession.getMapper(ProfileDao.class);
+		
+		dao.deleteDao(request.getParameter("qnum"));
+		
+		return "redirect:list";
 	}
 	
 	

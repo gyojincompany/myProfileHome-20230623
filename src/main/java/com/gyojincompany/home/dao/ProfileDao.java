@@ -22,6 +22,8 @@ public interface ProfileDao {
 	public int writeDao(String qid, String qcontent);//질문게시판 글쓰기
 	public List<BoardDto> listDao(int amount, int pageNum);//모든 글 목록 불러오기
 	public BoardDto questionViewDao(String qnum);//해당 번호의 글 하나 불러오기
+	public int boardTotalCountDao();//모든 글의 개수를 반환
+	public int deleteDao(String qnum);//글 삭제
 	
 	
 	

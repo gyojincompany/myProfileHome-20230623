@@ -45,4 +45,12 @@
 		SELECT * FROM pboard WHERE qnum=#{param1}
 	</select>
 	
+	<select id="boardTotalCountDao" resultType="int">
+		SELECT count(*) FROM pboard
+	</select>
+	
+	<delete id="deleteDao">
+		DELETE FROM pboard WHERE qnum=#{param1}
+	</delete>
+	
 </mapper>	
