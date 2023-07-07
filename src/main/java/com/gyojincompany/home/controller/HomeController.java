@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.gyojincompany.home.dao.ProfileDao;
 import com.gyojincompany.home.dto.BoardDto;
+import com.gyojincompany.home.dto.Criteria;
 import com.gyojincompany.home.dto.MemberDto;
 
 @Controller
@@ -168,11 +169,21 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/list")
-	public String list(Model model) {
+	public String list(Model model, HttpServletRequest request, Criteria criteria) {
+		
+		int pageNum = 0;
+		
+		if(request.getParameter("pageNum") == null) {
+			pageNum = 1;
+			criteria.setPageNum(pageNum);
+		} else {
+			pageNum = Integer.parseInt(request.getParameter("pageNum"));
+			criteria.setPageNum(pageNum);
+		}
 		
 		ProfileDao dao = sqlSession.getMapper(ProfileDao.class);
 		
-		List<BoardDto> boardDtos = dao.listDao();
+		List<BoardDto> boardDtos = dao.listDao(criteria.getAmount(), pageNum);
 		
 		model.addAttribute("boardDtos", boardDtos);
 		
